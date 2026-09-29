@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>design-lib · Componentes</title>
+</head>
+<body>
+  <div class="dl-layout">
+    <aside class="dl-sidebar">
+      <a class="dl-logo" href="/">design<span>-lib</span></a>
+      <p class="dl-nav-group">Componentes</p>
+      <ul class="dl-nav-list">
+        <li><a class="dl-nav-link" data-slug="text-input" href="/demo/text-input.html">Text Input</a></li>
+        <li><a class="dl-nav-link" data-slug="alert"      href="/demo/alert.html">Alert</a></li>
+      </ul>
+    </aside>
+
+    <main class="dl-main">
+      <div class="dl-page-header">
+        <h1 class="dl-page-title">Componentes</h1>
+        <p class="dl-page-description">
+          Librería de componentes web reutilizables construida con Lit.
+          Seleccioná un componente para ver su demo y documentación.
+        </p>
+      </div>
+
+      <div class="dl-home-grid">
+        <a class="dl-component-card" href="/demo/text-input.html">
+          <span class="dl-component-card__tag">&lt;ui-text-input&gt;</span>
+          <span class="dl-component-card__name">Text Input</span>
+          <span class="dl-component-card__desc">
+            Campo de texto con label, helper text, validación y múltiples estados.
+          </span>
+        </a>
+
+        <a class="dl-component-card" href="/demo/alert.html">
+          <span class="dl-component-card__tag">&lt;ui-alert&gt;</span>
+          <span class="dl-component-card__name">Alert</span>
+          <span class="dl-component-card__desc">
+            Mensaje de alerta con variantes INFO, WARNING, ERROR y SUCCESS.
+          </span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="./demo/_shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "@design-lib/web-components",
+  "version": "0.1.2",
+  "type": "module",
+  "exports": {
+    ".":             { "types": "./src/index.ts",                                 "default": "./dist/index.js" },
+    "./text-input":  { "types": "./src/components/text-input/index.ts",           "default": "./dist/text-input.js" },
+    "./alert":       { "types": "./src/components/alert/index.ts",                "default": "./dist/alert.js" },
+    "./check-box":   { "types": "./src/components/check-box/index.ts",            "default": "./dist/check-box.js" },
+    "./radio-button":{ "types": "./src/components/radio-button/index.ts",         "default": "./dist/radio-button.js" },
+    "./button":      { "types": "./src/components/button/index.ts",               "default": "./dist/button.js" },
+    "./kebab":       { "types": "./src/components/kebab/index.ts",                "default": "./dist/kebab.js" },
+    "./onboarding":  { "types": "./src/components/onboarding/index.ts",           "default": "./dist/onboarding.js" },
+    "./chip":        { "types": "./src/components/chip/index.ts",                 "default": "./dist/chip.js" },
+    "./calendar":    { "types": "./src/components/calendar/index.ts",             "default": "./dist/calendar.js" },
+    "./tooltip":     { "types": "./src/components/tooltip/index.ts",              "default": "./dist/tooltip.js" }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@design-lib/core": "file:../core",
+    "@design-lib/tokens": "file:../tokens",
+    "lit": "^3.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.3.0"
+  },
+  "files": ["src", "dist"],
+  "typesVersions": {
+    "*": {
+      ".":            ["./src/index.ts"],
+      "text-input":   ["./src/components/text-input/index.ts"],
+      "alert":        ["./src/components/alert/index.ts"],
+      "check-box":    ["./src/components/check-box/index.ts"],
+      "radio-button": ["./src/components/radio-button/index.ts"],
+      "button":       ["./src/components/button/index.ts"],
+      "kebab":        ["./src/components/kebab/index.ts"],
+      "onboarding":   ["./src/components/onboarding/index.ts"],
+      "chip":         ["./src/components/chip/index.ts"],
+      "calendar":     ["./src/components/calendar/index.ts"],
+      "tooltip":      ["./src/components/tooltip/index.ts"]
+    }
+  }
+}

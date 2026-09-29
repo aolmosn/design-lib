@@ -1,0 +1,35 @@
+// ─── Color de texto ──────────────────────────────────────────
+.color-primary        { color: var(--ui-color-primary); }
+.color-error          { color: var(--ui-color-error); }
+.color-success        { color: var(--ui-color-success-600); }
+.color-text-primary   { color: var(--ui-color-text-primary); }
+.color-text-secondary { color: var(--ui-color-text-secondary); }
+.color-text-disabled  { color: var(--ui-color-text-disabled); }
+
+// Escala de grises
+.color-gray-50  { color: var(--ui-color-gray-50); }
+.color-gray-100 { color: var(--ui-color-gray-100); }
+.color-gray-200 { color: var(--ui-color-gray-200); }
+.color-gray-300 { color: var(--ui-color-gray-300); }
+.color-gray-400 { color: var(--ui-color-gray-400); }
+.color-gray-500 { color: var(--ui-color-gray-500); }
+.color-gray-700 { color: var(--ui-color-gray-700); }
+.color-gray-900 { color: var(--ui-color-gray-900); }
+
+// ─── Color de fondo ──────────────────────────────────────────
+.bg-primary         { background-color: var(--ui-color-primary); }
+.bg-primary-50      { background-color: var(--ui-color-primary-50); }
+.bg-primary-100     { background-color: var(--ui-color-primary-100); }
+.bg-error           { background-color: var(--ui-color-error); }
+.bg-error-50        { background-color: var(--ui-color-error-50); }
+.bg-success         { background-color: var(--ui-color-success-500); }
+.bg-surface         { background-color: var(--ui-color-surface); }
+.bg-surface-disabled { background-color: var(--ui-color-surface-disabled); }
+.bg-gray-50         { background-color: var(--ui-color-gray-50); }
+.bg-gray-100        { background-color: var(--ui-color-gray-100); }
+.bg-transparent     { background-color: transparent; }
+
+// ─── Color de borde ──────────────────────────────────────────
+.border-color-default { border-color: var(--ui-color-border); }
+.border-color-primary { border-color: var(--ui-color-primary); }
+.border-color-error   { border-color: var(--ui-color-error); }

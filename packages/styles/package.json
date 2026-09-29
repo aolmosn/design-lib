@@ -1,0 +1,9 @@
+{
+  "name": "@design-lib/styles",
+  "version": "0.1.0",
+  "exports": {
+    ".":          "./src/index.scss",
+    "./mixins":   "./src/mixins/_breakpoints.scss"
+  },
+  "files": ["src"]
+}

@@ -1,0 +1,86 @@
+@use '../mixins/breakpoints' as *;
+
+// ─── Display ────────────────────────────────────────────────
+@include responsive('flex')         { display: flex; }
+@include responsive('flex-col')     { display: flex; flex-direction: column; }
+@include responsive('flex-row')     { display: flex; flex-direction: row; }
+@include responsive('inline-flex')  { display: inline-flex; }
+@include responsive('grid')         { display: grid; }
+@include responsive('block')        { display: block; }
+@include responsive('inline')       { display: inline; }
+@include responsive('inline-block') { display: inline-block; }
+@include responsive('hidden')       { display: none; }
+
+// ─── Flex wrap ──────────────────────────────────────────────
+@include responsive('flex-wrap')   { flex-wrap: wrap; }
+@include responsive('flex-nowrap') { flex-wrap: nowrap; }
+
+// ─── Flex grow / shrink ─────────────────────────────────────
+@include responsive('flex-1')    { flex: 1 1 0%; }
+@include responsive('flex-auto') { flex: 1 1 auto; }
+@include responsive('flex-none') { flex: none; }
+
+// ─── Align items ────────────────────────────────────────────
+@include responsive('items-start')   { align-items: flex-start; }
+@include responsive('items-center')  { align-items: center; }
+@include responsive('items-end')     { align-items: flex-end; }
+@include responsive('items-stretch') { align-items: stretch; }
+@include responsive('items-baseline') { align-items: baseline; }
+
+// ─── Justify content ────────────────────────────────────────
+@include responsive('justify-start')   { justify-content: flex-start; }
+@include responsive('justify-center')  { justify-content: center; }
+@include responsive('justify-end')     { justify-content: flex-end; }
+@include responsive('justify-between') { justify-content: space-between; }
+@include responsive('justify-around')  { justify-content: space-around; }
+@include responsive('justify-evenly')  { justify-content: space-evenly; }
+
+// ─── Dimensiones ────────────────────────────────────────────
+@include responsive('w-full')   { width: 100%; }
+@include responsive('w-auto')   { width: auto; }
+@include responsive('h-full')   { height: 100%; }
+@include responsive('h-auto')   { height: auto; }
+@include responsive('w-1')      { width: calc((100%/12)); }
+@include responsive('w-2')      { width: calc((100%/12)*2); }
+@include responsive('w-3')      { width: calc((100%/12)*3); }
+@include responsive('w-4')      { width: calc((100%/12)*4); }
+@include responsive('w-5')      { width: calc((100%/12)*5); }
+@include responsive('w-6')      { width: calc((100%/12)*6); }
+@include responsive('w-7')      { width: calc((100%/12)*7); }
+@include responsive('w-8')      { width: calc((100%/12)*8); }
+@include responsive('w-9')      { width: calc((100%/12)*9); }
+@include responsive('w-10')      { width: calc((100%/12)*10); }
+@include responsive('w-11')      { width: calc((100%/12)*11); }
+@include responsive('w-12')      { width: calc((100%/12)*12); }
+
+
+// ─── Grid ───────────────────────────────────────────────────
+@include responsive('grid-1') { display: grid; grid-template-columns: repeat(1, 1fr); }
+@include responsive('grid-2') { display: grid; grid-template-columns: repeat(2, 1fr); }
+@include responsive('grid-3') { display: grid; grid-template-columns: repeat(3, 1fr); }
+@include responsive('grid-4') { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+// Columnas asimétricas frecuentes
+@include responsive('grid-1-2') { display: grid; grid-template-columns: 1fr 2fr; }
+@include responsive('grid-2-1') { display: grid; grid-template-columns: 2fr 1fr; }
+@include responsive('grid-1-3') { display: grid; grid-template-columns: 1fr 3fr; }
+@include responsive('grid-3-1') { display: grid; grid-template-columns: 3fr 1fr; }
+
+// Span de columnas (para elementos que deben ocupar más de una columna)
+@include responsive('col-span-1') { grid-column: span 1; }
+@include responsive('col-span-2') { grid-column: span 2; }
+@include responsive('col-span-3') { grid-column: span 3; }
+@include responsive('col-span-4') { grid-column: span 4; }
+@include responsive('col-span-full') { grid-column: 1 / -1; }
+
+// ─── Overflow ───────────────────────────────────────────────
+.overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+
+// ─── Position ───────────────────────────────────────────────
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+

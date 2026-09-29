@@ -1,0 +1,16 @@
+{
+  "name": "@design-lib/angular",
+  "version": "0.1.1",
+  "main": "./dist/fesm2022/design-lib-angular.mjs",
+  "typings": "./dist/types/design-lib-angular.d.ts",
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=17.0.0",
+    "@angular/core": ">=17.0.0",
+    "@angular/forms": ">=17.0.0",
+    "@design-lib/web-components": "*"
+  },
+  "files": ["src", "dist"]
+}

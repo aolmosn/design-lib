@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "inlineSources": true,
+    "sourceRoot": ".",
+    "paths": {
+      "@design-lib/core":                        ["../core/src/index.ts"],
+      "@design-lib/web-components":              ["../web-components/src/index.ts"],
+      "@design-lib/web-components/text-input":   ["../web-components/src/components/text-input/index.ts"],
+      "@design-lib/web-components/alert":        ["../web-components/src/components/alert/index.ts"],
+      "@design-lib/web-components/check-box":    ["../web-components/src/components/check-box/index.ts"],
+      "@design-lib/web-components/radio-button": ["../web-components/src/components/radio-button/index.ts"],
+      "@design-lib/web-components/button":       ["../web-components/src/components/button/index.ts"],
+      "@design-lib/web-components/kebab":        ["../web-components/src/components/kebab/index.ts"],
+      "@design-lib/web-components/chip":         ["../web-components/src/components/chip/index.ts"],
+      "@design-lib/web-components/onboarding":   ["../web-components/src/components/onboarding/index.ts"]
+    }
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "full",
+    "strictTemplates": false
+  },
+  "exclude": ["**/*.spec.ts", "test.ts"]
+}

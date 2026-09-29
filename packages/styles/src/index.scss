@@ -1,0 +1,17 @@
+// @design-lib/styles — sistema de utilidades CSS
+//
+// Requiere que @design-lib/tokens esté cargado globalmente en el HTML
+// antes de que estas clases se usen, ya que todas las propiedades dependen
+// de las variables CSS definidas en tokens.css.
+//
+// Uso en un proyecto consumidor:
+//   @use '@design-lib/styles';                    // todas las utilidades
+//   @use '@design-lib/styles/mixins' as ui;       // solo los mixins
+//   @include ui.respond-to('md') { ... }
+
+@use 'utilities/layout';
+@use 'utilities/spacing';
+@use 'utilities/typography';
+@use 'utilities/colors';
+@use 'utilities/borders';
+@use 'utilities/shadows';

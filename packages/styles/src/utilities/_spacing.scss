@@ -1,0 +1,48 @@
+@use '../mixins/breakpoints' as *;
+
+// Escala de espaciado alineada con --ui-space-* de @design-lib/tokens
+// Clave = sufijo de clase (px), valor = token CSS correspondiente
+$_space: (
+   0:  var(--wk-space-0),
+   4:  var(--wk-space-1),
+   8:  var(--wk-space-2),
+  12:  var(--wk-space-3),
+  16:  var(--wk-space-4),
+  20:  var(--wk-space-5),
+  24:  var(--wk-space-6),
+  32:  var(--wk-space-8),
+  40:  var(--wk-space-10),
+  48:  var(--wk-space-12),
+);
+
+// ─── Gap ────────────────────────────────────────────────────
+@each $size, $value in $_space {
+  @include responsive('gap-#{$size}')   { gap: $value; }
+  @include responsive('gap-x-#{$size}') { column-gap: $value; }
+  @include responsive('gap-y-#{$size}') { row-gap: $value; }
+}
+
+// ─── Padding ────────────────────────────────────────────────
+@each $size, $value in $_space {
+  @include responsive('p-#{$size}')  { padding: $value; }
+  @include responsive('px-#{$size}') { padding-left: $value; padding-right: $value; }
+  @include responsive('py-#{$size}') { padding-top: $value;  padding-bottom: $value; }
+  @include responsive('pt-#{$size}') { padding-top: $value; }
+  @include responsive('pr-#{$size}') { padding-right: $value; }
+  @include responsive('pb-#{$size}') { padding-bottom: $value; }
+  @include responsive('pl-#{$size}') { padding-left: $value; }
+}
+
+// ─── Margin ─────────────────────────────────────────────────
+@each $size, $value in $_space {
+  @include responsive('m-#{$size}')  { margin: $value; }
+  @include responsive('mx-#{$size}') { margin-left: $value; margin-right: $value; }
+  @include responsive('my-#{$size}') { margin-top: $value;  margin-bottom: $value; }
+  @include responsive('mt-#{$size}') { margin-top: $value; }
+  @include responsive('mr-#{$size}') { margin-right: $value; }
+  @include responsive('mb-#{$size}') { margin-bottom: $value; }
+  @include responsive('ml-#{$size}') { margin-left: $value; }
+}
+
+// Centrado horizontal
+.mx-auto { margin-left: auto; margin-right: auto; }

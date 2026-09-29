@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Alert · design-lib</title>
+</head>
+<body>
+  <div class="dl-layout">
+    <aside class="dl-sidebar">
+      <a class="dl-logo" href="/">design<span>-lib</span></a>
+      <p class="dl-nav-group">Componentes</p>
+      <ul class="dl-nav-list">
+        <li><a class="dl-nav-link" data-slug="text-input" href="/demo/text-input.html">Text Input</a></li>
+        <li><a class="dl-nav-link" data-slug="alert"      href="/demo/alert.html">Alert</a></li>
+      </ul>
+    </aside>
+
+    <main class="dl-main">
+
+      <!-- Header -->
+      <div class="dl-page-header">
+        <h1 class="dl-page-title">Alert</h1>
+        <code class="dl-page-tag">&lt;ui-alert&gt;</code>
+        <p class="dl-page-description">
+          Mensaje de alerta para comunicar información, advertencias, errores o
+          confirmaciones al usuario. Soporta cuatro variantes de tipo y modo sin fondo.
+        </p>
+      </div>
+      <!-- Demo -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">Demo</h2>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Tipos</p>
+          <div class="dl-demo-body" style="display:flex;flex-direction:column;gap:0.75rem;">
+            <ui-alert type="INFO">    Información: revisá tu bandeja de entrada para confirmar tu cuenta.</ui-alert>
+            <ui-alert type="SUCCESS"> Éxito: tu solicitud fue procesada correctamente.</ui-alert>
+            <ui-alert type="WARNING"> Advertencia: tu sesión expira en 5 minutos.</ui-alert>
+            <ui-alert type="ERROR">   Error: no se pudo completar la operación. Intentá nuevamente.</ui-alert>
+          </div>
+        </div>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Sin fondo (no-background)</p>
+          <div class="dl-demo-body" style="display:flex;flex-direction:column;gap:0.75rem;">
+            <ui-alert type="INFO"    no-background>Información sin fondo.</ui-alert>
+            <ui-alert type="SUCCESS" no-background>Éxito sin fondo.</ui-alert>
+            <ui-alert type="WARNING" no-background>Advertencia sin fondo.</ui-alert>
+            <ui-alert type="ERROR"   no-background>Error sin fondo.</ui-alert>
+          </div>
+        </div>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Ícono personalizado (property <code>icons</code>)</p>
+          <div class="dl-demo-body" style="display:flex;flex-direction:column;gap:0.75rem;">
+            <ui-alert id="alert-custom-icon" type="ERROR">Error con ícono personalizado.</ui-alert>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playground -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">Playground</h2>
+        <div class="dl-demo-card" style="gap:0;">
+
+          <!-- Controles -->
+          <div id="pg-controls" style="
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:1rem 1.5rem;
+            padding:1.25rem 1.5rem;
+            border-bottom:1px solid var(--dl-border);
+          ">
+            <!-- Tipo -->
+            <div style="grid-column:1/-1;">
+              <p class="dl-demo-label" style="margin-bottom:0.5rem;">Tipo</p>
+              <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+                <button class="pg-chip pg-chip--active" data-type="INFO">INFO</button>
+                <button class="pg-chip" data-type="SUCCESS">SUCCESS</button>
+                <button class="pg-chip" data-type="WARNING">WARNING</button>
+                <button class="pg-chip" data-type="ERROR">ERROR</button>
+              </div>
+            </div>
+
+            <!-- Ícono -->
+            <div>
+              <label class="dl-demo-label" for="pg-icon" style="margin-bottom:0.5rem;display:block;">
+                Ícono (<a href="https://fonts.google.com/icons" target="_blank" style="color:var(--dl-accent);text-decoration:none;">Material Icons name</a>)
+              </label>
+              <div style="display:flex;gap:0.5rem;align-items:center;">
+                <input id="pg-icon" type="text" placeholder="ej: star, lock, send…"
+                  style="flex:1;padding:0.4rem 0.6rem;border:1px solid var(--dl-border);border-radius:6px;font-size:0.8125rem;background:var(--dl-bg);color:var(--dl-text);outline:none;" />
+                <button id="pg-icon-clear" title="Restablecer ícono por defecto"
+                  style="padding:0.3rem 0.6rem;border:1px solid var(--dl-border);border-radius:6px;cursor:pointer;font-size:0.75rem;background:var(--dl-bg);color:var(--dl-text);">
+                  Reset
+                </button>
+              </div>
+              <p style="margin:0.3rem 0 0;font-size:0.75rem;color:var(--dl-text-muted,#6b7280);">
+                Vacío = ícono por defecto del tipo
+              </p>
+            </div>
+
+            <!-- Mensaje -->
+            <div>
+              <label class="dl-demo-label" for="pg-text" style="margin-bottom:0.5rem;display:block;">Mensaje</label>
+              <input id="pg-text" type="text" value="Esta es una alerta de prueba."
+                style="width:100%;box-sizing:border-box;padding:0.4rem 0.6rem;border:1px solid var(--dl-border);border-radius:6px;font-size:0.8125rem;background:var(--dl-bg);color:var(--dl-text);outline:none;" />
+            </div>
+
+            <!-- Sin fondo -->
+            <div style="grid-column:1/-1;display:flex;align-items:center;gap:0.5rem;">
+              <input id="pg-no-bg" type="checkbox"
+                style="width:1rem;height:1rem;cursor:pointer;accent-color:var(--dl-accent);" />
+              <label for="pg-no-bg" style="font-size:0.875rem;cursor:pointer;">Sin fondo (<code>no-background</code>)</label>
+            </div>
+          </div>
+
+          <!-- Preview -->
+          <div class="dl-demo-body" style="padding:1.5rem;">
+            <ui-alert id="pg-alert" type="INFO">Esta es una alerta de prueba.</ui-alert>
+          </div>
+
+          <!-- Código generado -->
+          <div style="background:var(--dl-code-bg,#0f172a);border-top:1px solid var(--dl-border);border-radius:0 0 8px 8px;overflow:hidden;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem 1rem;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.75rem;color:#94a3b8;font-family:monospace;">HTML + JS</span>
+              <button id="pg-copy" style="font-size:0.75rem;padding:0.2rem 0.6rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;background:transparent;color:#94a3b8;cursor:pointer;">
+                Copiar
+              </button>
+            </div>
+            <pre id="pg-code" style="margin:0;padding:1rem;font-size:0.8125rem;color:#e2e8f0;overflow-x:auto;font-family:'Fira Code',Consolas,monospace;white-space:pre;line-height:1.6;"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Propiedades -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">Propiedades</h2>
+        <div class="dl-table-wrapper">
+          <table class="dl-table">
+            <thead>
+              <tr>
+                <th>Propiedad</th>
+                <th>Atributo HTML</th>
+                <th>Tipo</th>
+                <th>Default</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>type</code></td>
+                <td><code>type</code></td>
+                <td class="type">'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'</td>
+                <td><code>'INFO'</code></td>
+                <td>Variante visual y semántica de la alerta</td>
+              </tr>
+              <tr>
+                <td><code>noBackground</code></td>
+                <td><code>no-background</code></td>
+                <td class="type">boolean</td>
+                <td><code>false</code></td>
+                <td>Elimina el color de fondo, solo muestra el ícono y texto</td>
+              </tr>
+              <tr>
+                <td><code>content</code></td>
+                <td><code>content</code></td>
+                <td class="type">string</td>
+                <td><code>''</code></td>
+                <td>Texto de la alerta (alternativa al slot por defecto)</td>
+              </tr>
+              <tr>
+                <td><code>icons</code></td>
+                <td><em>solo JS</em></td>
+                <td class="type">Partial&lt;Record&lt;AlertType, string&gt;&gt;</td>
+                <td><code>{}</code></td>
+                <td>Sobreescribe el ícono de una o más variantes. Se setea como property (<code>el.icons = &#123; SUCCESS: 'task_alt' &#125;</code>), no como atributo HTML</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CSS Parts -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">CSS Parts</h2>
+        <div class="dl-table-wrapper">
+          <table class="dl-table">
+            <thead>
+              <tr><th>Part</th><th>Elemento</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>alert-container</code></td><td>Contenedor raíz de la alerta</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module">
+    import '../src/index.ts';
+    import './_shell.js';
+
+    // ── Ícono fijo de la sección "Ícono personalizado" ───────────────
+    customElements.whenDefined('ui-alert').then(() => {
+      document.getElementById('alert-custom-icon').icons = { ERROR: 'check' };
+    });
+
+    // ── Playground ───────────────────────────────────────────────────
+    const DEFAULT_ICONS = { INFO: 'info', SUCCESS: 'check_circle', WARNING: 'warning', ERROR: 'error' };
+
+    const pgAlert  = document.getElementById('pg-alert');
+    const pgIcon   = document.getElementById('pg-icon');
+    const pgText   = document.getElementById('pg-text');
+    const pgNoBg   = document.getElementById('pg-no-bg');
+    const pgCode   = document.getElementById('pg-code');
+    const pgCopy   = document.getElementById('pg-copy');
+    const pgClear  = document.getElementById('pg-icon-clear');
+    const chips    = document.querySelectorAll('.pg-chip');
+
+    let state = { type: 'INFO', noBackground: false, icon: '' };
+
+    function render() {
+      const { type, noBackground, icon } = state;
+
+      // Actualizar elemento
+      pgAlert.setAttribute('type', type);
+      pgAlert.textContent = pgText.value;
+      if (noBackground) pgAlert.setAttribute('no-background', '');
+      else              pgAlert.removeAttribute('no-background');
+
+      // icons es una property JS (attribute: false en Lit)
+      pgAlert.icons = icon ? { [type]: icon } : {};
+
+      // Snippet de código
+      const attrNoBg  = noBackground ? '\n  no-background' : '';
+      const hasCustom = !!icon;
+      const htmlPart  = `<ui-alert type="${type}"${attrNoBg}>\n  ${pgText.value}\n</ui-alert>`;
+      const jsPart    = hasCustom
+        ? `\n\n// icons se setea como property JS (no atributo HTML)\nconst el = document.querySelector('ui-alert');\nel.icons = { ${type}: '${icon}' };`
+        : '';
+      pgCode.textContent = htmlPart + jsPart;
+    }
+
+    // Chips de tipo
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('pg-chip--active'));
+        chip.classList.add('pg-chip--active');
+        state.type = chip.dataset.type;
+        // limpiar ícono al cambiar tipo para no confundir
+        pgIcon.value = '';
+        state.icon   = '';
+        render();
+      });
+    });
+
+    pgNoBg.addEventListener('change', () => { state.noBackground = pgNoBg.checked; render(); });
+    pgText.addEventListener('input',  () => render());
+    pgIcon.addEventListener('input',  () => { state.icon = pgIcon.value.trim(); render(); });
+    pgClear.addEventListener('click', () => { pgIcon.value = ''; state.icon = ''; render(); });
+
+    // Copiar código
+    pgCopy.addEventListener('click', () => {
+      navigator.clipboard.writeText(pgCode.textContent).then(() => {
+        pgCopy.textContent = '¡Copiado!';
+        setTimeout(() => { pgCopy.textContent = 'Copiar'; }, 1500);
+      });
+    });
+
+    customElements.whenDefined('ui-alert').then(render);
+  </script>
+</body>
+</html>

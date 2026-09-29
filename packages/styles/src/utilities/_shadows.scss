@@ -1,0 +1,8 @@
+// ─── Sombras ─────────────────────────────────────────────────
+.shadow-none { box-shadow: none; }
+.shadow-sm   { box-shadow: var(--ui-shadow-sm); }
+.shadow-md   { box-shadow: var(--ui-shadow-md); }
+
+// ─── Sombras de foco (accesibilidad) ─────────────────────────
+.shadow-focus-primary { box-shadow: var(--ui-shadow-focus-primary); }
+.shadow-focus-error   { box-shadow: var(--ui-shadow-focus-error); }

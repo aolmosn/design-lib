@@ -1,0 +1,13 @@
+{
+  "name": "@design-lib/tokens",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./src/index.ts",
+    "./css": "./src/tokens.css",
+    "./tokens.css": "./src/tokens.css"
+  },
+  "files": ["src", "dist"],
+  "scripts": {
+    "generate": "node scripts/generate-tokens.mjs"
+  }
+}

@@ -1,0 +1,80 @@
+@use '../mixins/breakpoints' as *;
+
+// ─── Tamaño de fuente (responsive) ──────────────────────────
+@include responsive('text-xs') { font-size: var(--ui-font-size-xs); line-height: var(--ui-line-height-normal); }
+@include responsive('text-sm') { font-size: var(--ui-font-size-sm); line-height: var(--ui-line-height-normal); }
+@include responsive('text-md') { font-size: var(--ui-font-size-md); line-height: var(--ui-line-height-normal); }
+@include responsive('text-lg') { font-size: var(--ui-font-size-lg); line-height: var(--ui-line-height-tight); }
+@include responsive('text-xl') { font-size: var(--ui-font-size-xl); line-height: var(--ui-line-height-tight); }
+
+// ─── Peso de fuente ──────────────────────────────────────────
+.font-normal   { font-weight: var(--ui-font-weight-normal); }
+.font-medium   { font-weight: var(--ui-font-weight-medium); }
+.font-semibold { font-weight: var(--ui-font-weight-semibold); }
+.font-bold     { font-weight: var(--ui-font-weight-bold); }
+
+// ─── Interlineado ────────────────────────────────────────────
+.leading-tight  { line-height: var(--ui-line-height-tight); }
+.leading-normal { line-height: var(--ui-line-height-normal); }
+.leading-loose  { line-height: var(--ui-line-height-loose); }
+
+// ─── Alineación de texto ─────────────────────────────────────
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+// ─── Decoración ──────────────────────────────────────────────
+.underline      { text-decoration: underline; }
+.no-underline   { text-decoration: none; }
+.line-through   { text-decoration: line-through; }
+.uppercase      { text-transform: uppercase; }
+.lowercase      { text-transform: lowercase; }
+.capitalize     { text-transform: capitalize; }
+.truncate       { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+// ─── Estilos semánticos del guideline ────────────────────────
+// Clases de propósito: definen el rol del texto según la guía de diseño
+
+.title-text {
+  font-size: var(--ui-font-size-xl);
+  font-weight: var(--ui-font-weight-bold);
+  line-height: var(--ui-line-height-tight);
+  color: var(--ui-color-text-primary);
+}
+
+.subtitle-text {
+  font-size: var(--ui-font-size-lg);
+  font-weight: var(--ui-font-weight-semibold);
+  line-height: var(--ui-line-height-tight);
+  color: var(--ui-color-text-primary);
+}
+
+.body-text {
+  font-size: var(--ui-font-size-md);
+  font-weight: var(--ui-font-weight-normal);
+  line-height: var(--ui-line-height-normal);
+  color: var(--ui-color-text-primary);
+}
+
+.caption-text {
+  font-size: var(--ui-font-size-xs);
+  font-weight: var(--ui-font-weight-normal);
+  line-height: var(--ui-line-height-normal);
+  color: var(--ui-color-text-secondary);
+}
+
+.label-text {
+  font-size: var(--ui-font-size-sm);
+  font-weight: var(--ui-font-weight-medium);
+  line-height: var(--ui-line-height-normal);
+  color: var(--ui-color-text-primary);
+}
+
+.overline-text {
+  font-size: var(--ui-font-size-xs);
+  font-weight: var(--ui-font-weight-semibold);
+  line-height: var(--ui-line-height-normal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ui-color-text-secondary);
+}

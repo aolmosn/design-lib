@@ -1,0 +1,35 @@
+// Breakpoints alineados con los tokens de @design-lib/tokens
+$breakpoints: (
+  'sm':  640px,
+  'md':  768px,
+  'lg':  1024px,
+  'xl':  1280px,
+) !default;
+
+// Aplica estilos a partir de un breakpoint (mobile-first)
+// Uso: @include respond-to('md') { display: flex; }
+@mixin respond-to($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media (max-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$bp}` no existe. Disponibles: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Genera una clase base + su variante para cada breakpoint
+// Uso: @include responsive('flex-col') { display: flex; flex-direction: column; }
+// Resultado: .flex-col  /  .sm\:flex-col  /  .md\:flex-col  /  .lg\:flex-col  /  .xl\:flex-col
+@mixin responsive($name) {
+  .#{$name} {
+    @content;
+  }
+  @each $bp, $width in $breakpoints {
+    @media (min-width: $width) {
+      .#{$bp}\:#{$name} {
+        @content;
+      }
+    }
+  }
+}

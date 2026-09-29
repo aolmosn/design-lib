@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Input · design-lib</title>
+</head>
+<body>
+  <div class="dl-layout">
+    <aside class="dl-sidebar">
+      <a class="dl-logo" href="/">design<span>-lib</span></a>
+      <p class="dl-nav-group">Componentes</p>
+      <ul class="dl-nav-list">
+        <li><a class="dl-nav-link" data-slug="text-input" href="/demo/text-input.html">Text Input</a></li>
+        <li><a class="dl-nav-link" data-slug="alert"      href="/demo/alert.html">Alert</a></li>
+      </ul>
+    </aside>
+
+    <main class="dl-main">
+
+      <!-- Header -->
+      <div class="dl-page-header">
+        <h1 class="dl-page-title">Text Input</h1>
+        <code class="dl-page-tag">&lt;ui-text-input&gt;</code>
+        <p class="dl-page-description">
+          Campo de texto base con soporte para label, texto de ayuda, validación,
+          tamaños y estados. Emite eventos personalizados con prefijo <code>ui-</code>
+          para no colisionar con los eventos nativos del DOM.
+        </p>
+      </div>
+
+      <!-- Demo -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">Demo</h2>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Default</p>
+          <div class="dl-demo-body">
+            <ui-text-input
+              label="Nombre completo"
+              placeholder="Ej. María García"
+              helper-text="Tal como aparece en tu documento de identidad"
+            ></ui-text-input>
+          </div>
+        </div>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Requerido · con error</p>
+          <div class="dl-demo-body dl-demo-row">
+            <ui-text-input
+              label="Correo electrónico"
+              placeholder="tu@correo.com"
+              required
+            ></ui-text-input>
+            <ui-text-input
+              label="Correo electrónico"
+              value="no-es-un-correo"
+              invalid
+              required
+              error-text="Ingresá un correo válido"
+            ></ui-text-input>
+          </div>
+        </div>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Estados</p>
+          <div class="dl-demo-body dl-demo-row">
+            <ui-text-input label="Deshabilitado" value="valor existente" disabled></ui-text-input>
+            <ui-text-input label="Solo lectura" value="ACC-20240910" readonly helper-text="Contactá soporte para modificar"></ui-text-input>
+          </div>
+        </div>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Tamaños</p>
+          <div class="dl-demo-body">
+            <ui-text-input label="Small"  placeholder="sm" size="sm"></ui-text-input>
+            <br />
+            <ui-text-input label="Medium" placeholder="md (default)"></ui-text-input>
+            <br />
+            <ui-text-input label="Large"  placeholder="lg" size="lg"></ui-text-input>
+          </div>
+        </div>
+
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Eventos en tiempo real</p>
+          <div class="dl-demo-body">
+            <ui-text-input
+              id="event-demo"
+              label="Escribí algo"
+              placeholder="Los eventos aparecen abajo"
+              helper-text="Escucha: ui-input, ui-focus, ui-blur, ui-change"
+            ></ui-text-input>
+            <div class="dl-log" id="log"><p>— esperando eventos —</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Propiedades -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">Propiedades</h2>
+        <div class="dl-table-wrapper">
+          <table class="dl-table">
+            <thead>
+              <tr>
+                <th>Propiedad</th>
+                <th>Atributo HTML</th>
+                <th>Tipo</th>
+                <th>Default</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>label</code></td><td><code>label</code></td><td class="type">string</td><td><code>''</code></td><td>Texto del label visible</td></tr>
+              <tr><td><code>value</code></td><td><code>value</code></td><td class="type">string</td><td><code>''</code></td><td>Valor del campo</td></tr>
+              <tr><td><code>placeholder</code></td><td><code>placeholder</code></td><td class="type">string</td><td><code>''</code></td><td>Texto placeholder</td></tr>
+              <tr><td><code>name</code></td><td><code>name</code></td><td class="type">string</td><td><code>''</code></td><td>Nombre del campo (formularios nativos)</td></tr>
+              <tr><td><code>size</code></td><td><code>size</code></td><td class="type">'sm' | 'md' | 'lg'</td><td><code>'md'</code></td><td>Tamaño visual del input</td></tr>
+              <tr><td><code>disabled</code></td><td><code>disabled</code></td><td class="type">boolean</td><td><code>false</code></td><td>Deshabilita el campo</td></tr>
+              <tr><td><code>readonly</code></td><td><code>readonly</code></td><td class="type">boolean</td><td><code>false</code></td><td>Campo de solo lectura</td></tr>
+              <tr><td><code>required</code></td><td><code>required</code></td><td class="type">boolean</td><td><code>false</code></td><td>Marca el campo como requerido (agrega *)</td></tr>
+              <tr><td><code>invalid</code></td><td><code>invalid</code></td><td class="type">boolean</td><td><code>false</code></td><td>Activa el estado de error</td></tr>
+              <tr><td><code>helperText</code></td><td><code>helper-text</code></td><td class="type">string</td><td><code>''</code></td><td>Texto de ayuda debajo del campo</td></tr>
+              <tr><td><code>errorText</code></td><td><code>error-text</code></td><td class="type">string</td><td><code>''</code></td><td>Mensaje de error (requiere <code>invalid</code>)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Eventos -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">Eventos</h2>
+        <div class="dl-table-wrapper">
+          <table class="dl-table">
+            <thead>
+              <tr><th>Evento</th><th>Detail</th><th>Descripción</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>ui-input</code></td><td><code>{ value: string }</code></td><td>Se dispara en cada keystroke (equivalente a <code>input</code>)</td></tr>
+              <tr><td><code>ui-change</code></td><td><code>{ value: string }</code></td><td>Se dispara al confirmar el valor (equivalente a <code>change</code>)</td></tr>
+              <tr><td><code>ui-focus</code></td><td><code>{}</code></td><td>El campo recibió el foco</td></tr>
+              <tr><td><code>ui-blur</code></td><td><code>{}</code></td><td>El campo perdió el foco</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CSS Parts -->
+      <section class="dl-section">
+        <h2 class="dl-section-title">CSS Parts</h2>
+        <p style="font-size:0.875rem;color:#64748b;margin-bottom:1rem;">
+          Permiten estilizar partes internas del componente desde fuera usando <code>::part()</code>.
+        </p>
+        <div class="dl-table-wrapper">
+          <table class="dl-table">
+            <thead>
+              <tr><th>Part</th><th>Elemento</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>field</code></td><td>Contenedor raíz del componente</td></tr>
+              <tr><td><code>label</code></td><td>Elemento <code>&lt;label&gt;</code></td></tr>
+              <tr><td><code>input</code></td><td>Elemento <code>&lt;input&gt;</code> nativo</td></tr>
+              <tr><td><code>helper</code></td><td>Texto de ayuda</td></tr>
+              <tr><td><code>error</code></td><td>Mensaje de error</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="dl-demo-card">
+          <p class="dl-demo-label">Ejemplo de customización con ::part()</p>
+          <div class="dl-demo-body">
+            <style>
+              #custom-demo::part(input) {
+                border-radius: 9999px;
+                padding-left: 1rem;
+              }
+              #custom-demo::part(label) {
+                color: #7c3aed;
+                font-style: italic;
+              }
+            </style>
+            <ui-text-input
+              id="custom-demo"
+              label="Label customizado"
+              placeholder="Input con border-radius full"
+            ></ui-text-input>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module">
+    import '../src/index.ts';
+    import './_shell.js';
+
+    const log = document.getElementById('log');
+    const demo = document.getElementById('event-demo');
+
+    function addLog(msg) {
+      const p = document.createElement('p');
+      p.textContent = `${new Date().toLocaleTimeString()} · ${msg}`;
+      if (log.firstChild?.textContent === '— esperando eventos —') log.innerHTML = '';
+      log.prepend(p);
+      if (log.children.length > 6) log.lastChild.remove();
+    }
+
+    demo.addEventListener('ui-input',  e => addLog(`ui-input  → "${e.detail.value}"`));
+    demo.addEventListener('ui-change', e => addLog(`ui-change → "${e.detail.value}"`));
+    demo.addEventListener('ui-focus',  () => addLog('ui-focus'));
+    demo.addEventListener('ui-blur',   () => addLog('ui-blur'));
+  </script>
+</body>
+</html>

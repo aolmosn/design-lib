@@ -1,0 +1,296 @@
+:root {
+  /* ─── Espaciado (base 4px) ──────────────────────────────── */
+  /* @group espaciado */
+  --wk-space-0: 0px;
+  --wk-space-1: 4px;
+  --wk-space-2: 8px;
+  --wk-space-3: 12px;
+  --wk-space-4: 16px;
+  --wk-space-5: 20px;
+  --wk-space-6: 24px;
+  --wk-space-8: 32px;
+  --wk-space-10: 40px;
+  --wk-space-12: 48px;
+  /* @endgroup */
+
+  /* ─── Radio de borde ────────────────────────────────────── */
+  /* @group radios */
+  --wk-radius-sm:   4px;
+  --wk-radius-md:   6px;
+  --wk-radius-lg:   8px;
+  --wk-radius-xl:   12px;
+  --wk-radius-full: 9999px;
+  /* @endgroup */
+
+  /* ─── Sombras ───────────────────────────────────────────── */
+  /* @group sombras */
+  --wk-shadow-40:          0 1px 4px 0px #37474F40;
+  --wk-shadow-80:          0 2px 4px 0px #37474F33;
+  --wk-shadow-120:          0 6px 12px 0px #37474F33;
+  /* @endgroup */
+
+  /* ─── Transiciones ──────────────────────────────────────── */
+  /* @group transiciones */
+  --wk-transition-fast:   0.1s ease;
+  --wk-transition-normal: 0.15s ease;
+  --wk-transition-slow:   0.25s ease;
+  /* @endgroup */
+
+  /* ─── Breakpoints (referencia, usar en media queries) ───── */
+  /* @group breakpoints */
+  --wk-breakpoint-sm: 640px;
+  --wk-breakpoint-md: 768px;
+  --wk-breakpoint-lg: 1024px;
+  --wk-breakpoint-xl: 1280px;
+  /* @endgroup */
+}
+
+
+:root {
+
+   /* ─── Primitivos: Color ─────────────────────────────────── */
+  /* @group primitivos:scale */
+
+  --wk-green-500: #28892B;
+  --wk-green-400: #53A155;
+  --wk-green-300: #7EB880;
+  --wk-green-200: #A9D0AA;
+  --wk-green-100: #D4E7D5;
+  --wk-green-50: #E9F3EA;
+
+  --wk-gray-500: #37474F;
+  --wk-gray-400: #546E7A;
+  --wk-gray-300: #BBC5CA;
+  --wk-gray-200: #E2E8EA;
+  --wk-gray-100: #F6F7F8;
+  --wk-gray-50: #F6F7F8;
+
+  --wk-blue-500: #2772CC;
+  --wk-blue-400: #528ED6;
+  --wk-blue-300: #7DAAE0;
+  --wk-blue-200: #A9C7EB;
+  --wk-blue-100: #D4E3F5;
+  --wk-blue-50: #E5EEF9;
+
+  --wk-red-500: #ED0C10;
+  --wk-red-400: #F13D47;
+  --wk-red-300: #F46D75;
+  --wk-red-200: #F89EA3;
+  --wk-red-100: #FBCED1;
+  --wk-red-50: #FDE7E8;
+  
+  --wk-yellow-500: #FFE300;
+  --wk-yellow-400: #FFE933;
+  --wk-yellow-300: #FFEE66;
+  --wk-yellow-200: #FFF499;
+  --wk-yellow-100: #FFF9CC;
+  --wk-yellow-50: #FFFCE5;
+
+  --wk-white: #FFFFFF;
+  --wk-black: #000000;
+  /* @endgroup */
+
+  /* ─── Tipografía ────────────────────────────────────────── */
+  /* @group primitivos.tipografia */
+  --wk-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /* @endgroup */
+
+  /* @group semanticos.sizeSemantico */
+  --wk-font-size-xs: 0.75rem;   /* 12px */
+  --wk-font-size-sm: 0.875rem;  /* 14px */
+  --wk-font-size-md: 1rem;      /* 16px */
+  --wk-font-size-lg: 1.125rem;  /* 18px */
+  --wk-font-size-xl: 1.25rem;   /* 20px */
+  /* @endgroup */
+
+  /* @group primitivos.size */
+  --wk-font-size-h1: 1.75rem;     /* 28px */
+  --wk-font-size-h2: 1.5rem;      /* 24px */
+  --wk-font-size-h3: 1.25rem;     /* 20px */
+  --wk-font-size-h4: 1rem;        /* 20px */
+  --wk-font-size-b1: 0.875rem;    /* 14px */
+  --wk-font-size-b2: 0.8125rem;   /* 13px */
+  --wk-font-size-b3: 0.8125rem;   /* 13px */
+  --wk-font-size-b4: 0.75rem;     /* 12px */
+  /* @endgroup */
+
+  /* @group primitivos.lineHeight */
+  --wk-font-line-height-h1: 2rem;      /* 32px */
+  --wk-font-line-height-h2: 1.75rem;   /* 28px */
+  --wk-font-line-height-h3: 1.5rem;    /* 24px */
+  --wk-font-line-height-h4: 1.25rem;   /* 20px */
+  --wk-font-line-height-b1: 1.25rem;   /* 20px */
+  --wk-font-line-height-b2: 1rem;     /* 16px */
+  --wk-font-line-height-b3: 1rem;      /* 16px */
+  --wk-font-line-height-b4: 0.875rem;  /* 16px */
+  /* @endgroup */
+
+  /* @group primitivos.peso */
+  --wk-font-weight-normal:   400;
+  --wk-font-weight-medium:   500;
+  --wk-font-weight-semibold: 600;
+  --wk-font-weight-bold:     700;
+  /* @endgroup */
+
+  /* ─── surface ─────────────────────────────────── */
+  /* @group semanticos.surface */
+  --wk-color-surface:         var(--wk-white);
+  --wk-color-surface-alt:     var(--wk-gray-50);
+  --wk-color-surface-raised:  var(--wk-white);
+  --wk-color-surface-overlay: rgba(0,0,0,0.4);
+  /* @endgroup */
+  /* ─── text ────────────────────────────────────── */
+  /* @group semanticos.text */
+  --wk-color-on-surface:          var(--wk-gray-500); /* Texto principal, íconos primarios */
+  --wk-color-on-surface-muted:    var(--wk-gray-400); /* Texto secundario, labels, placeholders, descripciones */
+  --wk-color-on-surface-disabled: var(--wk-gray-200); /* Texto de elementos desactivados */
+  /* @endgroup */
+  /* ─── border ──────────────────────────────────── */
+  /* @group semanticos.border */
+  --wk-color-border:        var(--wk-gray-200); /* Borde de cards, inputs en reposo, separadores */
+  --wk-color-border-strong: var(--wk-gray-400); /* Borde con mayor contraste, inputs con foco */
+  --wk-color-border-error:  var(--wk-red-500);  /* Borde de inputs en estado de error */
+  /* @endgroup */
+  /* ─── Verde — Acción principal ────────────────── */
+  /* @group semanticos.action */
+  --wk-color-action:                  var(--wk-green-500);
+  --wk-color-action-on:               var(--wk-white);
+  --wk-color-action-border:           var(--wk-green-500);
+  --wk-color-action-hover:            var(--wk-green-400);
+  --wk-color-action-on-hover:         var(--wk-white);
+  --wk-color-action-hover-border:     var(--wk-green-400);
+  --wk-color-action-active:           var(--wk-green-300);
+  --wk-color-action-on-active:        var(--wk-white);
+  --wk-color-action-active-border:    var(--wk-green-300);
+  --wk-color-action-subtle:           var(--wk-green-100); /* Fondo de alert success               */
+  --wk-color-action-on-subtle:        var(--wk-green-500); /* Ícono/texto SOBRE fondo subtle        */
+  --wk-color-action-subtle-border:    var(--wk-green-100); /* Fondo de alert success               */
+  /* @endgroup */
+  /* ─── Azul — Navegación e informa ─────────────── */
+  /* @group semanticos.info */
+  --wk-color-info:                    var(--wk-blue-500);  /* Links, botón link, badges informativos */
+  --wk-color-info-on:                 var(--wk-white);  /* Links, botón link, badges informativos */
+  --wk-color-info-border:             var(--wk-blue-500);  /* Links, botón link, badges informativos */
+  --wk-color-info-hover:              var(--wk-blue-400);  /* Hover de links                         */
+  --wk-color-info-on-hover:           var(--wk-white);  /* Hover de links                         */
+  --wk-color-info-hover-border:       var(--wk-blue-400);  /* Hover de links                         */
+  --wk-color-info-active:             var(--wk-blue-300);
+  --wk-color-info-on-active:          var(--wk-white);
+  --wk-color-info-active-border:      var(--wk-blue-300);
+  --wk-color-info-subtle:             var(--wk-blue-100);  /* Fondo de alerts informativos           */
+  --wk-color-info-on-subtle:          var(--wk-blue-500);  /* Ícono/texto SOBRE fondo subtle         */
+  --wk-color-info-subtle-border:      var(--wk-blue-100);  /* Fondo de alerts informativos           */
+  --wk-color-focus:                   var(--wk-blue-500);  /* Anillo de foco de inputs (accesibilidad) */
+  /* @endgroup */
+  /* ─── Rojo — Destructivo y error ──────────────── */
+  /* @group semanticos.danger */
+  --wk-color-danger:                  var(--wk-red-500);   /* Botón eliminar, borde de input inválido */
+  --wk-color-danger-on:               var(--wk-white);   /* Botón eliminar, borde de input inválido */
+  --wk-color-danger-border:           var(--wk-red-500);   /* Botón eliminar, borde de input inválido */
+  --wk-color-danger-hover:            var(--wk-red-300);   /* Hover del botón danger                  */
+  --wk-color-danger-on-hover:         var(--wk-white);   /* Hover del botón danger                  */
+  --wk-color-danger-hover-border:     var(--wk-red-300);   /* Hover del botón danger                  */
+  --wk-color-danger-active:           var(--wk-red-400);   /* Hover del botón danger                  */
+  --wk-color-danger-on-active:        var(--wk-red-200);   /* Hover del botón danger                  */
+  --wk-color-danger-active-border:    var(--wk-red-400);   /* Hover del botón danger                  */
+  --wk-color-danger-subtle:           var(--wk-red-100);   /* Fondo de alerts de error, fila con error */
+  --wk-color-danger-on-subtle:        var(--wk-red-500);   /* Ícono/texto SOBRE fondo subtle           */
+  --wk-color-danger-subtle-border:    var(--wk-red-100);   /* Fondo de alerts de error, fila con error */
+  /* @endgroup */
+  /* ─── Amarillo — Advertencia ──────────────── */
+  /* @group semanticos.warning */
+  --wk-color-warning:                    var(--wk-yellow-500); /* Badge de advertencia, ícono de alerta */
+  --wk-color-warning-on:                 var(--wk-gray-500);   /* Texto encima de fondo amarillo        */
+  --wk-color-warning-border:             var(--wk-yellow-500); /* Badge de advertencia, ícono de alerta */
+  --wk-color-warning-hover:              var(--wk-yellow-300);   /* Hover del botón warning                  */
+  --wk-color-warning-on-hover:           var(--wk-gray-400);   /* Hover del botón warning                  */
+  --wk-color-warning-hover-border:       var(--wk-yellow-300);   /* Hover del botón warning                  */
+  --wk-color-warning-active:             var(--wk-yellow-400);   /* Hover del botón warning                  */
+  --wk-color-warning-on-active:          var(--wk-gray-500);   /* Hover del botón warning                */
+  --wk-color-warning-active-border:      var(--wk-yellow-400);   /* Hover del botón warning                  */
+  --wk-color-warning-subtle:             var(--wk-yellow-100); /* Fondo de alert de warning             */
+  --wk-color-warning-on-subtle:          var(--wk-gray-400); /* Ícono SOBRE fondo subtle              */
+  --wk-color-warning-subtle-border:      var(--wk-yellow-100); /* Fondo de alert de warning             */
+  /* @endgroup */
+  /* ─── Code ──────────────── */
+  /* @group semanticos.code */
+  --wk-code-surface:            var(--wk-blue-100);
+  --wk-on-code-surface:         var(--wk-blue-500);
+  /* @endgroup */
+  /* ─── Expresivos ──────────────── */
+  /* @group expresivos.acentoMarca */
+  --wk-accent:        var(--wk-green-500);
+  --wk-accent-soft:   var(--wk-green-300);
+  /* @endgroup */
+  /* @group expresivos.gradienteMarca */
+  --wk-gradient-brand: linear-gradient(135deg, #6d5ef8 0%, #a78bfa 100%);
+  /* --wk-gradient-brand: linear-gradient(135deg, #4636dc 0%, #fd7373 100%);*/
+  --wk-gradient-glow: linear-gradient(135deg, #6d5ef8 0%, #a78bfa 100%);
+  /* @endgroup */
+  /* @group expresivos.sombraMarca */
+  --wk-shadow-accent: 0 8px 24px -8px rgba(109, 94, 248, 0.35);
+  /* @endgroup */
+  /* @group expresivos.animacionMarca */
+  --wk-ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+  --wk-duration-brand: 220ms;
+  /* @endgroup */
+  /* @group expresivos.radiusnMarca */
+  --wk-radius-expressive: 14px;
+  /* @endgroup */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* ─── surface ─────────────────────────────────── */
+    --wk-color-surface:         #272727;
+    --wk-color-surface-alt:     #252323;
+    --wk-color-surface-raised:  #2d2d2d;
+    --wk-color-surface-overlay: rgba(0,0,0,0.8);
+    /* ─── text ────────────────────────────────────── */
+    --wk-color-on-surface:          var(--wk-white);
+    --wk-color-on-surface-muted:    var(--wk-gray-300);
+    --wk-color-on-surface-disabled: var(--wk-gray-400);
+    /* ─── border ──────────────────────────────────── */
+    --wk-color-border:        #434343;
+    --wk-color-border-strong: #8c8c8c;
+    --wk-color-border-error:  var(--wk-red-400);
+    /* ─── feedback: fondos e íconos se invierten en dark ── */
+    --wk-color-action-subtle:     linear-gradient(135deg, #28892B 0%, #5e9020 100%);
+    --wk-color-action-on-subtle:  var(--wk-white);
+    --wk-color-info-subtle:       linear-gradient(135deg, #2772CC 0%, #426cd3 100%);;
+    --wk-color-info-on-subtle:    var(--wk-white);
+    /* --wk-color-danger-subtle:     var(--wk-red-500); */
+    --wk-color-danger-subtle:     linear-gradient(135deg, #ED0C10 0%, #d34273 100%);
+    --wk-color-danger-on-subtle:  var(--wk-white);
+    --wk-color-warning-subtle:    linear-gradient(135deg, #FFE300 0%, #d3a442 100%);
+    --wk-color-warning-on-subtle: var(--wk-gray-500);
+    /* ─── Code ──────────────── */
+    --wk-code-surface:            var(--wk-blue-500);
+    --wk-on-code-surface:         var(--wk-blue-100);
+  }
+}
+
+:root[data-theme="dark"] {
+  /* ─── surface ─────────────────────────────────── */
+  --wk-color-surface:         #161515;
+  --wk-color-surface-alt:     #161515;
+  --wk-color-surface-raised:  var(--wk-black);
+  --wk-color-surface-overlay: rgba(0,0,0,0.4);
+  /* ─── text ────────────────────────────────────── */
+  --wk-color-on-surface:          var(--wk-white);
+  --wk-color-on-surface-muted:    var(--wk-gray-300);
+  --wk-color-on-surface-disabled: var(--wk-gray-400);
+  /* ─── border ──────────────────────────────────── */
+  --wk-color-border:        var(--wk-gray-50);
+  --wk-color-border-strong: var(--wk-white);
+  --wk-color-border-error:  var(--wk-red-400);
+  /* ─── feedback: fondos e íconos se invierten en dark ── */
+  --wk-color-action-subtle:     var(--wk-green-500);
+  --wk-color-action-on-subtle:  var(--wk-green-100);
+  --wk-color-info-subtle:       var(--wk-blue-500);
+  --wk-color-info-on-subtle:    var(--wk-blue-100);
+  --wk-color-danger-subtle:     var(--wk-red-500);
+  --wk-color-danger-on-subtle:  var(--wk-red-100);
+  --wk-color-warning-subtle:    var(--wk-yellow-500);
+  --wk-color-warning-on-subtle: var(--wk-gray-500);
+}
