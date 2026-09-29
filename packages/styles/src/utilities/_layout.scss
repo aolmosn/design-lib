@@ -84,3 +84,26 @@
 .fixed    { position: fixed; }
 .sticky   { position: sticky; }
 
+// ─── Responsive display overrides ───────────────────────────
+// Los variants responsive de display deben ganar sobre cualquier clase
+// base (ej. hidden lg:block, block lg:hidden). Sin esto, el orden de
+// declaración del mixin hace que .hidden siempre pise a .lg\:block.
+// !important + posición al final del archivo garantiza la prioridad.
+@each $bp, $width in $breakpoints {
+  @media (min-width: $width) {
+    .#{$bp}\:flex          { display: flex          !important; }
+    .#{$bp}\:flex-col      { display: flex          !important; flex-direction: column !important; }
+    .#{$bp}\:flex-row      { display: flex          !important; flex-direction: row    !important; }
+    .#{$bp}\:inline-flex   { display: inline-flex   !important; }
+    .#{$bp}\:grid          { display: grid          !important; }
+    .#{$bp}\:grid-1        { display: grid          !important; grid-template-columns: repeat(1, 1fr) !important; }
+    .#{$bp}\:grid-2        { display: grid          !important; grid-template-columns: repeat(2, 1fr) !important; }
+    .#{$bp}\:grid-3        { display: grid          !important; grid-template-columns: repeat(3, 1fr) !important; }
+    .#{$bp}\:grid-4        { display: grid          !important; grid-template-columns: repeat(4, 1fr) !important; }
+    .#{$bp}\:block         { display: block         !important; }
+    .#{$bp}\:inline        { display: inline        !important; }
+    .#{$bp}\:inline-block  { display: inline-block  !important; }
+    .#{$bp}\:hidden        { display: none          !important; }
+  }
+}
+
