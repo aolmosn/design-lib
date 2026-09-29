@@ -9,11 +9,20 @@
     "url": "https://github.com/aolmosn/design-lib"
   },
   "keywords": ["design-system", "scss", "styles"],
-  "exports": {
-    ".":       "./src/index.scss",
-    "./mixins": "./src/mixins/_breakpoints.scss"
+  "scripts": {
+    "build": "node scripts/generate-manifest.mjs"
   },
-  "files": ["src"],
+  "bin": {
+    "styles-purge": "./bin/purge.mjs"
+  },
+  "exports": {
+    ".":          "./src/index.scss",
+    "./css":      "./dist/styles.css",
+    "./css/min":  "./dist/styles.min.css",
+    "./mixins":   "./src/mixins/_breakpoints.scss",
+    "./manifest": "./dist/manifest.json"
+  },
+  "files": ["src", "dist", "scripts", "bin"],
   "publishConfig": {
     "access": "public"
   }
