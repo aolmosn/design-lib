@@ -18,9 +18,15 @@ $breakpoints: (
   }
 }
 
+// Passtrought interno: permite propagar !important a todo el @content de un @include
+@mixin _pass { @content; }
+
 // Genera una clase base + su variante para cada breakpoint
 // Uso: @include responsive('flex-col') { display: flex; flex-direction: column; }
 // Resultado: .flex-col  /  .sm\:flex-col  /  .md\:flex-col  /  .lg\:flex-col  /  .xl\:flex-col
+//
+// Los variants llevan !important para garantizar que siempre pisan a la clase base,
+// sin importar el orden de cascada entre archivos (ej. _utils.scss vs @aolmosn/styles).
 @mixin responsive($name) {
   .#{$name} {
     @content;
@@ -28,7 +34,7 @@ $breakpoints: (
   @each $bp, $width in $breakpoints {
     @media (min-width: $width) {
       .#{$bp}\:#{$name} {
-        @content;
+        @include _pass !important { @content; }
       }
     }
   }
