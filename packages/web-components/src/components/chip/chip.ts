@@ -65,19 +65,19 @@ export class UiChip extends LitElement{
         }
         .outlined.success {
           border: 1px solid var(--wk-color-action-border);
-          color: var(--wk-color-action-subtle);
+          color: var(--wk-color-action-on-subtle);
         }
         .outlined.info {
           border: 1px solid var(--wk-color-info-border);
-          color: var(--wk-color-info-subtle);
+          color: var(--wk-color-info-on-subtle);
         }
         .outlined.error {
           border: 1px solid var(--wk-color-danger-border);
-          color: var(--wk-color-danger-subtle);
+          color: var(--wk-color-danger-on-subtle);
         }
         .outlined.warning {
           border: 1px solid var(--wk-color-warning-border);
-          color: var(--wk-color-warning-subtle);
+          color: var(--wk-color-warning-on-subtle);
         }
         .clickeable{
           cursor: pointer;

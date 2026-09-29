@@ -223,9 +223,11 @@
   --wk-accent-soft:   var(--wk-green-300);
   /* @endgroup */
   /* @group expresivos.gradienteMarca */
-  --wk-gradient-brand: linear-gradient(135deg, #6d5ef8 0%, #a78bfa 100%);
+  --wk-gradient-brand:    linear-gradient(135deg, #6d5ef8 0%, #a78bfa 100%);
   /* --wk-gradient-brand: linear-gradient(135deg, #4636dc 0%, #fd7373 100%);*/
-  --wk-gradient-glow: linear-gradient(135deg, #6d5ef8 0%, #a78bfa 100%);
+  --wk-gradient-brand-on: #ffffff;
+  --wk-gradient-glow:     linear-gradient(135deg, #6d5ef8 0%, #a78bfa 100%);
+  --wk-gradient-glow-on:  #ffffff;
   /* @endgroup */
   /* @group expresivos.sombraMarca */
   --wk-shadow-accent: 0 8px 24px -8px rgba(109, 94, 248, 0.35);

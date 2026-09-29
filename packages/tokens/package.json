@@ -1,6 +1,6 @@
 {
   "name": "@aolmosn/tokens",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Design tokens (CSS variables and JS constants) for design-lib",
   "license": "MIT",
   "author": "Andres Olmos",

@@ -1,9 +1,20 @@
 {
   "name": "@aolmosn/styles",
-  "version": "0.1.0",
-  "exports": {
-    ".":          "./src/index.scss",
-    "./mixins":   "./src/mixins/_breakpoints.scss"
+  "version": "0.1.1",
+  "description": "Shared SCSS styles and mixins for design-lib",
+  "license": "MIT",
+  "author": "Andres Olmos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aolmosn/design-lib"
   },
-  "files": ["src"]
+  "keywords": ["design-system", "scss", "styles"],
+  "exports": {
+    ".":       "./src/index.scss",
+    "./mixins": "./src/mixins/_breakpoints.scss"
+  },
+  "files": ["src"],
+  "publishConfig": {
+    "access": "public"
+  }
 }

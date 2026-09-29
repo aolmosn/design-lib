@@ -30,6 +30,7 @@ export class UiAlert extends LitElement {
                 }
                 .alert-container.background.alert-container--info {
                     background: var(--wk-color-info-subtle);
+                    color: var(--wk-color-info-on-subtle);
                 }
                 .alert-container.background.alert-container--info .material-icons {
                     color: var(--wk-color-info-on-subtle);
@@ -41,6 +42,7 @@ export class UiAlert extends LitElement {
                 }
                 .alert-container.background.alert-container--success {
                     background: var(--wk-color-action-subtle);
+                    color: var(--wk-color-action-on-subtle);
                 }
                 .alert-container.background.alert-container--success .material-icons {
                     color: var(--wk-color-action-on-subtle);
@@ -52,6 +54,7 @@ export class UiAlert extends LitElement {
                 }
                 .alert-container.background.alert-container--warning {
                     background: var(--wk-color-warning-subtle);
+                    color: var(--wk-color-warning-on-subtle);
                 }
                 .alert-container.background.alert-container--warning .material-icons {
                     color: var(--wk-color-warning-on-subtle);
@@ -63,6 +66,7 @@ export class UiAlert extends LitElement {
                 }
                 .alert-container.background.alert-container--error {
                     background: var(--wk-color-danger-subtle);
+                    color: var(--wk-color-danger-on-subtle);
                 }
                 .alert-container.background.alert-container--error .material-icons {
                     color: var(--wk-color-danger-on-subtle);
