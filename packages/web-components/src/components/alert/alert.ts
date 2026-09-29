@@ -1,5 +1,5 @@
-import { generateId, DEFAULT_ALERT_ICONS } from "@design-lib/core";
-import type { AlertType } from "@design-lib/core";
+import { generateId, DEFAULT_ALERT_ICONS } from "@aolmosn/core";
+import type { AlertType } from "@aolmosn/core";
 import { css, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";

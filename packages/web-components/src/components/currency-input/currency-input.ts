@@ -5,7 +5,7 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { styleMap } from 'lit/directives/style-map.js';
 import { repeat } from 'lit/directives/repeat.js';
-import { generateId } from '@design-lib/core';
+import { generateId } from '@aolmosn/core';
 import { inputBaseStyles } from '../../styles/input-base.styles';
 import { defaultFontFamily } from '../../styles/default-font.styles';
 import { materialIconsStyles } from '../../styles/material-icons.styles';

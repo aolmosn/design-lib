@@ -12,7 +12,7 @@ import {
   forwardRef,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import type { ComponentSize, FieldChangeDetail } from '@design-lib/core';
+import type { ComponentSize, FieldChangeDetail } from '@aolmosn/core';
 
 /**
  * Wrapper Angular de <ui-text-input>.

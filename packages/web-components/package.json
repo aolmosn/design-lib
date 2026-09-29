@@ -1,19 +1,34 @@
 {
-  "name": "@design-lib/web-components",
+  "name": "@aolmosn/web-components",
   "version": "0.1.2",
+  "description": "Lit web components for design-lib",
+  "license": "MIT",
+  "author": "Andres Olmos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aolmosn/design-lib"
+  },
+  "keywords": ["design-system", "web-components", "lit"],
   "type": "module",
   "exports": {
-    ".":             { "types": "./src/index.ts",                                 "default": "./dist/index.js" },
-    "./text-input":  { "types": "./src/components/text-input/index.ts",           "default": "./dist/text-input.js" },
-    "./alert":       { "types": "./src/components/alert/index.ts",                "default": "./dist/alert.js" },
-    "./check-box":   { "types": "./src/components/check-box/index.ts",            "default": "./dist/check-box.js" },
-    "./radio-button":{ "types": "./src/components/radio-button/index.ts",         "default": "./dist/radio-button.js" },
-    "./button":      { "types": "./src/components/button/index.ts",               "default": "./dist/button.js" },
-    "./kebab":       { "types": "./src/components/kebab/index.ts",                "default": "./dist/kebab.js" },
-    "./onboarding":  { "types": "./src/components/onboarding/index.ts",           "default": "./dist/onboarding.js" },
-    "./chip":        { "types": "./src/components/chip/index.ts",                 "default": "./dist/chip.js" },
-    "./calendar":    { "types": "./src/components/calendar/index.ts",             "default": "./dist/calendar.js" },
-    "./tooltip":     { "types": "./src/components/tooltip/index.ts",              "default": "./dist/tooltip.js" }
+    ".":                  { "types": "./src/index.ts",                                          "default": "./dist/index.js" },
+    "./text-input":       { "types": "./src/components/text-input/index.ts",                    "default": "./dist/text-input.js" },
+    "./alert":            { "types": "./src/components/alert/index.ts",                         "default": "./dist/alert.js" },
+    "./check-box":        { "types": "./src/components/check-box/index.ts",                     "default": "./dist/check-box.js" },
+    "./radio-button":     { "types": "./src/components/radio-button/index.ts",                  "default": "./dist/radio-button.js" },
+    "./button":           { "types": "./src/components/button/index.ts",                        "default": "./dist/button.js" },
+    "./kebab":            { "types": "./src/components/kebab/index.ts",                         "default": "./dist/kebab-container.js" },
+    "./onboarding":       { "types": "./src/components/onboarding/index.ts",                    "default": "./dist/onboarding-background.js" },
+    "./chip":             { "types": "./src/components/chip/index.ts",                          "default": "./dist/chip.js" },
+    "./calendar":         { "types": "./src/components/calendar/index.ts",                      "default": "./dist/calendar.js" },
+    "./calendar-extended":{ "types": "./src/components/calendar/calendar-extended.ts",          "default": "./dist/calendar-extended.js" },
+    "./tooltip":          { "types": "./src/components/tooltip/index.ts",                       "default": "./dist/tooltip.js" },
+    "./select":           { "types": "./src/components/select/index.ts",                        "default": "./dist/select.js" },
+    "./stepper":          { "types": "./src/components/stepper/index.ts",                       "default": "./dist/stepper.js" },
+    "./textarea":         { "types": "./src/components/textarea/index.ts",                      "default": "./dist/textarea.js" },
+    "./currency-input":   { "types": "./src/components/currency-input/index.ts",                "default": "./dist/currency-input.js" },
+    "./table":            { "types": "./src/components/table/index.ts",                         "default": "./dist/table.js" },
+    "./input-date":       { "types": "./src/components/date-input/index.ts",                    "default": "./dist/input-date.js" }
   },
   "scripts": {
     "dev": "vite",
@@ -21,27 +36,37 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@design-lib/core": "file:../core",
-    "@design-lib/tokens": "file:../tokens",
     "lit": "^3.2.0"
   },
   "devDependencies": {
+    "@aolmosn/core": "^0.1.0",
+    "@aolmosn/tokens": "^0.1.0",
     "vite": "^5.3.0"
   },
   "files": ["src", "dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "typesVersions": {
     "*": {
-      ".":            ["./src/index.ts"],
-      "text-input":   ["./src/components/text-input/index.ts"],
-      "alert":        ["./src/components/alert/index.ts"],
-      "check-box":    ["./src/components/check-box/index.ts"],
-      "radio-button": ["./src/components/radio-button/index.ts"],
-      "button":       ["./src/components/button/index.ts"],
-      "kebab":        ["./src/components/kebab/index.ts"],
-      "onboarding":   ["./src/components/onboarding/index.ts"],
-      "chip":         ["./src/components/chip/index.ts"],
-      "calendar":     ["./src/components/calendar/index.ts"],
-      "tooltip":      ["./src/components/tooltip/index.ts"]
+      ".":                  ["./src/index.ts"],
+      "text-input":         ["./src/components/text-input/index.ts"],
+      "alert":              ["./src/components/alert/index.ts"],
+      "check-box":          ["./src/components/check-box/index.ts"],
+      "radio-button":       ["./src/components/radio-button/index.ts"],
+      "button":             ["./src/components/button/index.ts"],
+      "kebab":              ["./src/components/kebab/index.ts"],
+      "onboarding":         ["./src/components/onboarding/index.ts"],
+      "chip":               ["./src/components/chip/index.ts"],
+      "calendar":           ["./src/components/calendar/index.ts"],
+      "calendar-extended":  ["./src/components/calendar/calendar-extended.ts"],
+      "tooltip":            ["./src/components/tooltip/index.ts"],
+      "select":             ["./src/components/select/index.ts"],
+      "stepper":            ["./src/components/stepper/index.ts"],
+      "textarea":           ["./src/components/textarea/index.ts"],
+      "currency-input":     ["./src/components/currency-input/index.ts"],
+      "table":              ["./src/components/table/index.ts"],
+      "input-date":         ["./src/components/date-input/index.ts"]
     }
   }
 }

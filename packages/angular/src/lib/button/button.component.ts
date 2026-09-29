@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input } from "@angular/core";
-import '@design-lib/web-components/button';
+import '@aolmosn/web-components/button';
 
 export type ButtonType = 'PRIMARY' | 'SECONDARY' | 'TERTIARY' | 'LINK' | 'QUINARY';
 

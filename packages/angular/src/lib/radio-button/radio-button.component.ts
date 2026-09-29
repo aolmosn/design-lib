@@ -1,7 +1,7 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, forwardRef, HostBinding, Input, NgZone } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import type { RadioButtonChangeDetail } from '@design-lib/web-components/radio-button';
-import '@design-lib/web-components/radio-button';
+import type { RadioButtonChangeDetail } from '@aolmosn/web-components/radio-button';
+import '@aolmosn/web-components/radio-button';
 
 @Component({
   selector: 'ui-radio-button',

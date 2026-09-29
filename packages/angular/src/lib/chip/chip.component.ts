@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, input } from "@angular/core";
-import '@design-lib/web-components/chip';
+import '@aolmosn/web-components/chip';
 
 @Component({
   selector: 'ui-chip',

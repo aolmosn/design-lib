@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input } from '@angular/core';
-import '@design-lib/web-components/alert';
+import '@aolmosn/web-components/alert';
 
 export type AlertType = 'INFO' | 'WARNING' | 'ERROR' | 'SUCCESS';
 

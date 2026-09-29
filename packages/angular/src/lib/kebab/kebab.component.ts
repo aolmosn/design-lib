@@ -9,7 +9,7 @@ import {
   forwardRef,
   input
 } from '@angular/core';
-import '@design-lib/web-components/kebab';
+import '@aolmosn/web-components/kebab';
 
 @Component({
   selector: 'ui-kebab-container',

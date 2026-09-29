@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
-import '@design-lib/web-components/onboarding';
-import type { OnboardingStep } from '@design-lib/web-components/onboarding';
+import '@aolmosn/web-components/onboarding';
+import type { OnboardingStep } from '@aolmosn/web-components/onboarding';
 
 export type { OnboardingStep };
 

@@ -3,7 +3,7 @@ import { customElement, property, state, query } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleMap } from 'lit/directives/style-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import { generateId } from '@design-lib/core';
+import { generateId } from '@aolmosn/core';
 import { inputBaseStyles } from '../../styles/input-base.styles';
 import { materialIconsStyles } from '../../styles/material-icons.styles';
 import { defaultFontFamily } from '../../styles/default-font.styles';

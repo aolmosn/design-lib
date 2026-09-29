@@ -1,8 +1,30 @@
 {
-  "name": "@design-lib/angular",
-  "version": "0.1.1",
-  "main": "./dist/fesm2022/design-lib-angular.mjs",
-  "typings": "./dist/types/design-lib-angular.d.ts",
+  "name": "@aolmosn/angular",
+  "version": "0.1.2",
+  "description": "Angular wrappers and components for design-lib",
+  "license": "MIT",
+  "author": "Andres Olmos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aolmosn/design-lib"
+  },
+  "keywords": ["design-system", "angular", "components"],
+  "type": "module",
+  "main": "./dist/fesm2022/aolmosn-angular.mjs",
+  "typings": "./dist/types/aolmosn-angular.d.ts",
+  "module": "./dist/fesm2022/aolmosn-angular.mjs",
+  "exports": {
+    "./package.json": { "default": "./package.json" },
+    ".":              { "types": "./dist/types/aolmosn-angular.d.ts",              "default": "./dist/fesm2022/aolmosn-angular.mjs" },
+    "./alert":        { "types": "./dist/types/aolmosn-angular-alert.d.ts",        "default": "./dist/fesm2022/aolmosn-angular-alert.mjs" },
+    "./button":       { "types": "./dist/types/aolmosn-angular-button.d.ts",       "default": "./dist/fesm2022/aolmosn-angular-button.mjs" },
+    "./check-box":    { "types": "./dist/types/aolmosn-angular-check-box.d.ts",    "default": "./dist/fesm2022/aolmosn-angular-check-box.mjs" },
+    "./chip":         { "types": "./dist/types/aolmosn-angular-chip.d.ts",         "default": "./dist/fesm2022/aolmosn-angular-chip.mjs" },
+    "./kebab":        { "types": "./dist/types/aolmosn-angular-kebab.d.ts",        "default": "./dist/fesm2022/aolmosn-angular-kebab.mjs" },
+    "./onboarding":   { "types": "./dist/types/aolmosn-angular-onboarding.d.ts",   "default": "./dist/fesm2022/aolmosn-angular-onboarding.mjs" },
+    "./radio-button": { "types": "./dist/types/aolmosn-angular-radio-button.d.ts", "default": "./dist/fesm2022/aolmosn-angular-radio-button.mjs" },
+    "./text-field":   { "types": "./dist/types/aolmosn-angular-text-field.d.ts",   "default": "./dist/fesm2022/aolmosn-angular-text-field.mjs" }
+  },
   "scripts": {
     "build": "ng-packagr -p ng-package.json"
   },
@@ -10,7 +32,10 @@
     "@angular/common": ">=17.0.0",
     "@angular/core": ">=17.0.0",
     "@angular/forms": ">=17.0.0",
-    "@design-lib/web-components": "*"
+    "@aolmosn/web-components": ">=0.1.0"
   },
-  "files": ["src", "dist"]
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["dist"]
 }

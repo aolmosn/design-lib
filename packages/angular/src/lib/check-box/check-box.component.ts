@@ -9,8 +9,8 @@ import {
   forwardRef,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import type { CheckBoxChangeDetail } from '@design-lib/web-components/check-box';
-import '@design-lib/web-components/check-box';
+import type { CheckBoxChangeDetail } from '@aolmosn/web-components/check-box';
+import '@aolmosn/web-components/check-box';
 
 /**
  * Wrapper Angular de <ui-check-box>.

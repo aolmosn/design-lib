@@ -1,13 +1,29 @@
 {
-  "name": "@design-lib/tokens",
+  "name": "@aolmosn/tokens",
   "version": "0.1.0",
-  "exports": {
-    ".": "./src/index.ts",
-    "./css": "./src/tokens.css",
-    "./tokens.css": "./src/tokens.css"
+  "description": "Design tokens (CSS variables and JS constants) for design-lib",
+  "license": "MIT",
+  "author": "Andres Olmos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aolmosn/design-lib"
   },
-  "files": ["src", "dist"],
+  "keywords": ["design-system", "design-tokens", "css-variables"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./css": "./dist/tokens.css",
+    "./tokens.css": "./dist/tokens.css"
+  },
   "scripts": {
-    "generate": "node scripts/generate-tokens.mjs"
+    "generate": "node scripts/generate-tokens.mjs",
+    "build": "tsc -p tsconfig.json && cp src/tokens.css dist/tokens.css"
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
   }
 }

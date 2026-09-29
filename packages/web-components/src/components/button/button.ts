@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { defaultFontFamily } from '../../styles/default-font.styles';
 import { materialIconsStyles } from "../../styles/material-icons.styles";
 import { classMap } from "lit/directives/class-map.js";
-import { ButtonType } from "@design-lib/core";
+import { ButtonType } from "@aolmosn/core";
 
 
 @customElement('ui-button')

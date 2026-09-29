@@ -1,8 +1,26 @@
 {
-  "name": "@design-lib/core",
+  "name": "@aolmosn/core",
   "version": "0.1.0",
-  "exports": {
-    ".": "./src/index.ts"
+  "description": "Types, utilities and shared definitions for design-lib",
+  "license": "MIT",
+  "author": "Andres Olmos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aolmosn/design-lib"
   },
-  "files": ["src", "dist"]
+  "keywords": ["design-system", "components", "typescript"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  }
 }

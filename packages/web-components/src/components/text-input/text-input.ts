@@ -2,8 +2,8 @@ import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import { generateId } from '@design-lib/core';
-import type { ComponentSize, FieldChangeDetail } from '@design-lib/core';
+import { generateId } from '@aolmosn/core';
+import type { ComponentSize, FieldChangeDetail } from '@aolmosn/core';
 import { inputBaseStyles } from '../../styles/input-base.styles';
 import { defaultFontFamily } from '../../styles/default-font.styles';
 

@@ -5,7 +5,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@design-lib/core',
+        find: '@aolmosn/core',
         replacement: resolve(__dirname, '../core/src/index.ts'),
       },
       {
